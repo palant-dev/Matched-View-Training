@@ -1,5 +1,5 @@
 //
-//  MatchedViewTextWithRepositioning.swift
+//  TutorialMVWithRepositioning.swift
 //  MatchedViewTraining
 //
 //  Created by Antonio Palomba on 13/04/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MatchedViewTextWithRepositioning: View {
+struct TutorialMVWithRepositioning: View {
     @Namespace var namespace
     @State var show = false
 
@@ -68,8 +68,9 @@ struct MatchedViewTextWithRepositioning: View {
     }
 }
 
-struct MatchedViewTextWithRepositioning_Previews: PreviewProvider {
+
+struct TutorialMVWithRepositioning_Previews: PreviewProvider {
     static var previews: some View {
-        MatchedViewTextWithRepositioning()
+        TutorialMVWithRepositioning()
     }
 }

@@ -1,5 +1,5 @@
 //
-//  MatchedViewTextWithColour.swift
+//  TutorialMVTextWithColours.swift
 //  MatchedViewTraining
 //
 //  Created by Antonio Palomba on 13/04/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MatchedViewTextWithColour: View {
+struct TutorialMVTextWithColours: View {
     @Namespace var namespace
     @State var show = false
 
@@ -49,8 +49,9 @@ struct MatchedViewTextWithColour: View {
     }
 }
 
-struct MatchedViewTextWithColour_Previews: PreviewProvider {
+
+struct TutorialMVTextWithColours_Previews: PreviewProvider {
     static var previews: some View {
-        MatchedViewTextWithColour()
+        TutorialMVTextWithColours()
     }
 }

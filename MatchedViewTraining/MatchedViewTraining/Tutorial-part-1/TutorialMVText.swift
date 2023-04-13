@@ -1,5 +1,5 @@
 //
-//  MatchedViewText.swift
+//  TutorialMVText.swift
 //  MatchedViewTraining
 //
 //  Created by Antonio Palomba on 13/04/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MatchedViewText: View {
+struct TutorialMVText: View {
     @Namespace var namespace
     @State var show = false
 
@@ -34,8 +34,9 @@ struct MatchedViewText: View {
     }
 }
 
-struct MatchedViewText_Previews: PreviewProvider {
+
+struct TutorialMVText_Previews: PreviewProvider {
     static var previews: some View {
-        MatchedViewText()
+        TutorialMVText()
     }
 }

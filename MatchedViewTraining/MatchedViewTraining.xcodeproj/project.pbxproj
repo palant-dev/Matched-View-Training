@@ -8,25 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		9E0581CF29E7F108005C0C26 /* MatchedViewTrainingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0581CE29E7F108005C0C26 /* MatchedViewTrainingApp.swift */; };
-		9E0581D129E7F108005C0C26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0581D029E7F108005C0C26 /* ContentView.swift */; };
 		9E0581D329E7F10B005C0C26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E0581D229E7F10B005C0C26 /* Assets.xcassets */; };
 		9E0581D629E7F10B005C0C26 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E0581D529E7F10B005C0C26 /* Preview Assets.xcassets */; };
-		9E0581DD29E7F1BB005C0C26 /* MatchedViewText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0581DC29E7F1BB005C0C26 /* MatchedViewText.swift */; };
-		9E0581DF29E7F542005C0C26 /* MatchedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0581DE29E7F542005C0C26 /* MatchedView.swift */; };
-		9E0581E129E7FBB2005C0C26 /* MatchedViewTextWithColour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0581E029E7FBB2005C0C26 /* MatchedViewTextWithColour.swift */; };
-		9E0581E329E805D1005C0C26 /* MatchedViewTextWithRepositioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0581E229E805D1005C0C26 /* MatchedViewTextWithRepositioning.swift */; };
+		9E84A9D129E81210007CB277 /* TutorialMVText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E84A9D029E81210007CB277 /* TutorialMVText.swift */; };
+		9E84A9D329E8124E007CB277 /* TutorialMVTextWithColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E84A9D229E8124E007CB277 /* TutorialMVTextWithColours.swift */; };
+		9E84A9D529E8128F007CB277 /* TutorialMVWithRepositioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E84A9D429E8128F007CB277 /* TutorialMVWithRepositioning.swift */; };
+		9E84A9D729E81320007CB277 /* MatchedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E84A9D629E81320007CB277 /* MatchedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9E0581CB29E7F108005C0C26 /* MatchedViewTraining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatchedViewTraining.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E0581CE29E7F108005C0C26 /* MatchedViewTrainingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedViewTrainingApp.swift; sourceTree = "<group>"; };
-		9E0581D029E7F108005C0C26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9E0581D229E7F10B005C0C26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E0581D529E7F10B005C0C26 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		9E0581DC29E7F1BB005C0C26 /* MatchedViewText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedViewText.swift; sourceTree = "<group>"; };
-		9E0581DE29E7F542005C0C26 /* MatchedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedView.swift; sourceTree = "<group>"; };
-		9E0581E029E7FBB2005C0C26 /* MatchedViewTextWithColour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedViewTextWithColour.swift; sourceTree = "<group>"; };
-		9E0581E229E805D1005C0C26 /* MatchedViewTextWithRepositioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedViewTextWithRepositioning.swift; sourceTree = "<group>"; };
+		9E84A9D029E81210007CB277 /* TutorialMVText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialMVText.swift; sourceTree = "<group>"; };
+		9E84A9D229E8124E007CB277 /* TutorialMVTextWithColours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialMVTextWithColours.swift; sourceTree = "<group>"; };
+		9E84A9D429E8128F007CB277 /* TutorialMVWithRepositioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialMVWithRepositioning.swift; sourceTree = "<group>"; };
+		9E84A9D629E81320007CB277 /* MatchedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +58,8 @@
 			isa = PBXGroup;
 			children = (
 				9E0581CE29E7F108005C0C26 /* MatchedViewTrainingApp.swift */,
-				9E0581D029E7F108005C0C26 /* ContentView.swift */,
+				9E84A9D629E81320007CB277 /* MatchedView.swift */,
 				9E0581E429E805FB005C0C26 /* Tutorial-part-1 */,
-				9E0581DE29E7F542005C0C26 /* MatchedView.swift */,
 				9E0581D229E7F10B005C0C26 /* Assets.xcassets */,
 				9E0581D429E7F10B005C0C26 /* Preview Content */,
 			);
@@ -80,9 +77,9 @@
 		9E0581E429E805FB005C0C26 /* Tutorial-part-1 */ = {
 			isa = PBXGroup;
 			children = (
-				9E0581DC29E7F1BB005C0C26 /* MatchedViewText.swift */,
-				9E0581E029E7FBB2005C0C26 /* MatchedViewTextWithColour.swift */,
-				9E0581E229E805D1005C0C26 /* MatchedViewTextWithRepositioning.swift */,
+				9E84A9D429E8128F007CB277 /* TutorialMVWithRepositioning.swift */,
+				9E84A9D029E81210007CB277 /* TutorialMVText.swift */,
+				9E84A9D229E8124E007CB277 /* TutorialMVTextWithColours.swift */,
 			);
 			path = "Tutorial-part-1";
 			sourceTree = "<group>";
@@ -157,12 +154,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E0581E129E7FBB2005C0C26 /* MatchedViewTextWithColour.swift in Sources */,
-				9E0581D129E7F108005C0C26 /* ContentView.swift in Sources */,
-				9E0581DF29E7F542005C0C26 /* MatchedView.swift in Sources */,
-				9E0581DD29E7F1BB005C0C26 /* MatchedViewText.swift in Sources */,
+				9E84A9D129E81210007CB277 /* TutorialMVText.swift in Sources */,
 				9E0581CF29E7F108005C0C26 /* MatchedViewTrainingApp.swift in Sources */,
-				9E0581E329E805D1005C0C26 /* MatchedViewTextWithRepositioning.swift in Sources */,
+				9E84A9D529E8128F007CB277 /* TutorialMVWithRepositioning.swift in Sources */,
+				9E84A9D329E8124E007CB277 /* TutorialMVTextWithColours.swift in Sources */,
+				9E84A9D729E81320007CB277 /* MatchedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
