@@ -13,6 +13,7 @@
 		9E0581D629E7F10B005C0C26 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E0581D529E7F10B005C0C26 /* Preview Assets.xcassets */; };
 		9E0581DD29E7F1BB005C0C26 /* MatchedViewText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0581DC29E7F1BB005C0C26 /* MatchedViewText.swift */; };
 		9E0581DF29E7F542005C0C26 /* MatchedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0581DE29E7F542005C0C26 /* MatchedView.swift */; };
+		9E0581E129E7FBB2005C0C26 /* MatchedViewTextWithColour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0581E029E7FBB2005C0C26 /* MatchedViewTextWithColour.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		9E0581D529E7F10B005C0C26 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9E0581DC29E7F1BB005C0C26 /* MatchedViewText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedViewText.swift; sourceTree = "<group>"; };
 		9E0581DE29E7F542005C0C26 /* MatchedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedView.swift; sourceTree = "<group>"; };
+		9E0581E029E7FBB2005C0C26 /* MatchedViewTextWithColour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedViewTextWithColour.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				9E0581CE29E7F108005C0C26 /* MatchedViewTrainingApp.swift */,
 				9E0581D029E7F108005C0C26 /* ContentView.swift */,
 				9E0581DC29E7F1BB005C0C26 /* MatchedViewText.swift */,
+				9E0581E029E7FBB2005C0C26 /* MatchedViewTextWithColour.swift */,
 				9E0581DE29E7F542005C0C26 /* MatchedView.swift */,
 				9E0581D229E7F10B005C0C26 /* Assets.xcassets */,
 				9E0581D429E7F10B005C0C26 /* Preview Content */,
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E0581E129E7FBB2005C0C26 /* MatchedViewTextWithColour.swift in Sources */,
 				9E0581D129E7F108005C0C26 /* ContentView.swift in Sources */,
 				9E0581DF29E7F542005C0C26 /* MatchedView.swift in Sources */,
 				9E0581DD29E7F1BB005C0C26 /* MatchedViewText.swift in Sources */,
