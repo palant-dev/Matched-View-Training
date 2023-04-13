@@ -59,6 +59,7 @@
 			children = (
 				9E0581CE29E7F108005C0C26 /* MatchedViewTrainingApp.swift */,
 				9E84A9D629E81320007CB277 /* MatchedView.swift */,
+				9EC370BE29E869EB0052192B /* Tutorial 2 */,
 				9E0581E429E805FB005C0C26 /* Tutorial-part-1 */,
 				9E0581D229E7F10B005C0C26 /* Assets.xcassets */,
 				9E0581D429E7F10B005C0C26 /* Preview Content */,
@@ -82,6 +83,13 @@
 				9E84A9D229E8124E007CB277 /* TutorialMVTextWithColours.swift */,
 			);
 			path = "Tutorial-part-1";
+			sourceTree = "<group>";
+		};
+		9EC370BE29E869EB0052192B /* Tutorial 2 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Tutorial 2";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
