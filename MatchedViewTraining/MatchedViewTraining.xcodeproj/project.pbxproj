@@ -14,6 +14,7 @@
 		9E84A9D329E8124E007CB277 /* TutorialMVTextWithColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E84A9D229E8124E007CB277 /* TutorialMVTextWithColours.swift */; };
 		9E84A9D529E8128F007CB277 /* TutorialMVWithRepositioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E84A9D429E8128F007CB277 /* TutorialMVWithRepositioning.swift */; };
 		9E84A9D729E81320007CB277 /* MatchedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E84A9D629E81320007CB277 /* MatchedView.swift */; };
+		9EC370C029E877500052192B /* TutorialMVOveralyAndMasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC370BF29E877500052192B /* TutorialMVOveralyAndMasks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		9E84A9D229E8124E007CB277 /* TutorialMVTextWithColours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialMVTextWithColours.swift; sourceTree = "<group>"; };
 		9E84A9D429E8128F007CB277 /* TutorialMVWithRepositioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialMVWithRepositioning.swift; sourceTree = "<group>"; };
 		9E84A9D629E81320007CB277 /* MatchedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedView.swift; sourceTree = "<group>"; };
+		9EC370BF29E877500052192B /* TutorialMVOveralyAndMasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialMVOveralyAndMasks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 		9EC370BE29E869EB0052192B /* Tutorial 2 */ = {
 			isa = PBXGroup;
 			children = (
+				9EC370BF29E877500052192B /* TutorialMVOveralyAndMasks.swift */,
 			);
 			path = "Tutorial 2";
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E84A9D129E81210007CB277 /* TutorialMVText.swift in Sources */,
+				9EC370C029E877500052192B /* TutorialMVOveralyAndMasks.swift in Sources */,
 				9E0581CF29E7F108005C0C26 /* MatchedViewTrainingApp.swift in Sources */,
 				9E84A9D529E8128F007CB277 /* TutorialMVWithRepositioning.swift in Sources */,
 				9E84A9D329E8124E007CB277 /* TutorialMVTextWithColours.swift in Sources */,

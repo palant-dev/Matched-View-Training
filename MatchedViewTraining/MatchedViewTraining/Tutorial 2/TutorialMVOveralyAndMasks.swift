@@ -1,5 +1,5 @@
 //
-//  MatchedView.swift
+//  TutorialMVOveralyAndMasks.swift
 //  MatchedViewTraining
 //
 //  Created by Antonio Palomba on 13/04/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MatchedView: View {
+struct TutorialMVOveralyAndMasks: View {
     @Namespace var namespace
     @State var show = false
 
@@ -140,9 +140,8 @@ struct MatchedView: View {
     }
 }
 
-
-struct MatchedView_Previews: PreviewProvider {
+struct TutorialMVOveralyAndMasks_Previews: PreviewProvider {
     static var previews: some View {
-        MatchedView()
+        TutorialMVOveralyAndMasks()
     }
 }
