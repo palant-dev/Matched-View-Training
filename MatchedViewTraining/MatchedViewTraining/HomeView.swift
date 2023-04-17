@@ -14,7 +14,7 @@ struct HomeView: View {
 
     var body: some View {
         ZStack {
-            Color(.gray).ignoresSafeArea()
+
 
             ScrollView {
                 Text("Courses".uppercased())
@@ -39,6 +39,8 @@ struct HomeView: View {
                 CourseView(namespace: namespace, show: $show)
             }
         }
+        // If you use the Color inside the ZStack it will break matchedGeometry
+        .background(Color(.gray).ignoresSafeArea())
         .statusBar(hidden: !showStatusBar)
         .onChange(of: show) { newValue in
             withAnimation(.closeCard) {
