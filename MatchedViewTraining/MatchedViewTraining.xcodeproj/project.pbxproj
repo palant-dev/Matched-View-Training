@@ -17,6 +17,7 @@
 		9EC370C029E877500052192B /* TutorialMVOveralyAndMasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC370BF29E877500052192B /* TutorialMVOveralyAndMasks.swift */; };
 		9EDB283229EDAB8D00C1906F /* CourseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDB283129EDAB8D00C1906F /* CourseItem.swift */; };
 		9EDB283529EDADAD00C1906F /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDB283429EDADAD00C1906F /* CourseView.swift */; };
+		9EDB283729EDAF0500C1906F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDB283629EDAF0500C1906F /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		9EC370BF29E877500052192B /* TutorialMVOveralyAndMasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialMVOveralyAndMasks.swift; sourceTree = "<group>"; };
 		9EDB283129EDAB8D00C1906F /* CourseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItem.swift; sourceTree = "<group>"; };
 		9EDB283429EDADAD00C1906F /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
+		9EDB283629EDAF0500C1906F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +65,9 @@
 		9E0581CD29E7F108005C0C26 /* MatchedViewTraining */ = {
 			isa = PBXGroup;
 			children = (
-				9E84A9D629E81320007CB277 /* MatchedView.swift */,
 				9E0581CE29E7F108005C0C26 /* MatchedViewTrainingApp.swift */,
+				9E84A9D629E81320007CB277 /* MatchedView.swift */,
+				9EDB283629EDAF0500C1906F /* HomeView.swift */,
 				9EDB283329EDAD9800C1906F /* View */,
 				9EDB283029EDAB6000C1906F /* Components */,
 				9EC370BE29E869EB0052192B /* Tutorial 2 */,
@@ -187,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EDB283729EDAF0500C1906F /* HomeView.swift in Sources */,
 				9E84A9D129E81210007CB277 /* TutorialMVText.swift in Sources */,
 				9EC370C029E877500052192B /* TutorialMVOveralyAndMasks.swift in Sources */,
 				9E0581CF29E7F108005C0C26 /* MatchedViewTrainingApp.swift in Sources */,
