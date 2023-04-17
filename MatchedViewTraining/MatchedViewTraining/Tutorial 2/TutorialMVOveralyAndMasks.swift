@@ -54,7 +54,7 @@ struct TutorialMVOveralyAndMasks: View {
                         .matchedGeometryEffect(id: "image", in: namespace)
                 )
                 .background(
-                    Image("Background5")
+                    Image("Background 5")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .matchedGeometryEffect(id: "background", in: namespace)
@@ -82,7 +82,7 @@ struct TutorialMVOveralyAndMasks: View {
                             .matchedGeometryEffect(id: "image", in: namespace)
                     )
                     .background(
-                        Image("Background5")
+                        Image("Background 5")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .matchedGeometryEffect(id: "background", in: namespace)
