@@ -121,7 +121,8 @@ struct CourseView: View {
     }
 
     var content: some View {
-        Text("Hello")
+        Text("The first factor is a signal beamed out from your internal twenty-four-hour clock located deep within your brain. The clock creates a cycling, day-night rhythm that makes you feel tired or alert at regular times of night and day, respectively. Everyone generates a circadian rhythm (circa, meaning “around,” and dian, derivative of diam, meaning “day”). Indeed, every living creature on the planet with a life span of more than several days generates this natural cycle. It controls other rhythmic patterns, too. These include your timed preferences for eating and drinking, your moods and emotions, the amount of urine you produce,I your core body temperature, your metabolic rate, and the release of numerous hormones.")
+            .padding(20)
     }
 
     func fadeIn() {

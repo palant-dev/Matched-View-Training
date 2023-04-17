@@ -11,6 +11,8 @@ struct HomeView: View {
     @Namespace var namespace
     @State var show = false
     @State var showStatusBar = true
+    // We are going to store in the selectedID the ID of the opened card
+    @State var selectedID = UUID()
 
     var body: some View {
         ZStack {
@@ -31,8 +33,20 @@ struct HomeView: View {
                                 withAnimation(.openCard) {
                                     show.toggle()
                                     showStatusBar = false
+                                    // This is for storing the open card ID inside the property
+                                    selectedID = course.id
                                 }
                         }
+                    }
+                } else {
+                    ForEach(courses) { course in
+                        Rectangle()
+                            .fill(.gray)
+                            .frame(height: 300)
+                            .cornerRadius(30)
+                            .shadow(color: Color(.black), radius: 20, x: 0, y: 20)
+                            .opacity(0.3)
+                        .padding(.horizontal, 30)
                     }
                 }
             }
@@ -40,11 +54,13 @@ struct HomeView: View {
             // You need to use this out of the ScrollView otherwise you will get cut by ScrollView boundaries
             if show {
                 ForEach(courses) { course in
-                    CourseView(namespace: namespace, course: course, show: $show)
-                    // In order to give an order of appearing/disappearing to the overlapping elements
-                        .zIndex(1)
-                    // This is for assuring you that the fade is not played too late or too early
-                    .transition(.asymmetric(insertion: .opacity.animation(.easeInOut(duration: 0.1)), removal: .opacity.animation(.easeInOut(duration: 0.3).delay(0.2))))
+                    if course.id == selectedID {
+                        CourseView(namespace: namespace, course: course, show: $show)
+                        // In order to give an order of appearing/disappearing to the overlapping elements
+                            .zIndex(1)
+                        // This is for assuring you that the fade is not played too late or too early
+                            .transition(.asymmetric(insertion: .opacity.animation(.easeInOut(duration: 0.1)), removal: .opacity.animation(.easeInOut(duration: 0.3).delay(0.2))))
+                    }
                 }
             }
         }
