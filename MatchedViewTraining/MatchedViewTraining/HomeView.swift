@@ -15,8 +15,13 @@ struct HomeView: View {
     var body: some View {
         ZStack {
 
-
             ScrollView {
+                Text("HomeView")
+                    .font(.largeTitle)
+                Text("HomeView")
+                    .font(.largeTitle)
+                Text("HomeView")
+                    .font(.largeTitle)
                 Text("Courses".uppercased())
                     .font(.footnote.weight(.semibold))
                     .foregroundColor(.white)
@@ -37,6 +42,10 @@ struct HomeView: View {
             // You need to use this out of the ScrollView otherwise you will get cut by ScrollView boundaries
             if show {
                 CourseView(namespace: namespace, show: $show)
+                // In order to give an order of appearing/disappearing to the overlapping elements
+                    .zIndex(1)
+                // This is for assuring you that the fade is not played too late or too early
+                    .transition(.asymmetric(insertion: .opacity.animation(.easeInOut(duration: 0.1)), removal: .opacity.animation(.easeInOut(duration: 0.3).delay(0.2))))
             }
         }
         // If you use the Color inside the ZStack it will break matchedGeometry
