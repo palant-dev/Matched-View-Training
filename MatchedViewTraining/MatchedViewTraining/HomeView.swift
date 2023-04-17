@@ -13,31 +13,20 @@ struct HomeView: View {
     @State var showStatusBar = true
     // We are going to store in the selectedID the ID of the opened card
     @State var selectedID = UUID()
-
+    
     var body: some View {
+        
         ZStack {
-
+            
             ScrollView {
-                Text("HomeView")
-                    .font(.largeTitle)
                 Text("Courses".uppercased())
                     .font(.footnote.weight(.semibold))
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal, 20)
-
+                
                 if !show {
-                    ForEach(courses) { course in
-                        CourseItem(namespace: namespace, course: course, show: $show)
-                            .onTapGesture {
-                                withAnimation(.openCard) {
-                                    show.toggle()
-                                    showStatusBar = false
-                                    // This is for storing the open card ID inside the property
-                                    selectedID = course.id
-                                }
-                        }
-                    }
+                    cards
                 } else {
                     ForEach(courses) { course in
                         Rectangle()
@@ -46,22 +35,14 @@ struct HomeView: View {
                             .cornerRadius(30)
                             .shadow(color: Color(.black), radius: 20, x: 0, y: 20)
                             .opacity(0.3)
-                        .padding(.horizontal, 30)
+                            .padding(.horizontal, 30)
                     }
                 }
             }
-
+            
             // You need to use this out of the ScrollView otherwise you will get cut by ScrollView boundaries
             if show {
-                ForEach(courses) { course in
-                    if course.id == selectedID {
-                        CourseView(namespace: namespace, course: course, show: $show)
-                        // In order to give an order of appearing/disappearing to the overlapping elements
-                            .zIndex(1)
-                        // This is for assuring you that the fade is not played too late or too early
-                            .transition(.asymmetric(insertion: .opacity.animation(.easeInOut(duration: 0.1)), removal: .opacity.animation(.easeInOut(duration: 0.3).delay(0.2))))
-                    }
-                }
+                detail
             }
         }
         // If you use the Color inside the ZStack it will break matchedGeometry
@@ -74,6 +55,33 @@ struct HomeView: View {
                 } else {
                     showStatusBar = true
                 }
+            }
+        }
+    }
+    
+    
+    var cards: some View {
+        ForEach(courses) { course in
+            CourseItem(namespace: namespace, course: course, show: $show)
+                .onTapGesture {
+                    withAnimation(.openCard) {
+                        show.toggle()
+                        showStatusBar = false
+                        // This is for storing the open card ID inside the property
+                        selectedID = course.id
+                    }
+                }
+        }
+    }
+    
+    var detail: some View {
+        ForEach(courses) { course in
+            if course.id == selectedID {
+                CourseView(namespace: namespace, course: course, show: $show)
+                // In order to give an order of appearing/disappearing to the overlapping elements
+                    .zIndex(1)
+                // This is for assuring you that the fade is not played too late or too early
+                    .transition(.asymmetric(insertion: .opacity.animation(.easeInOut(duration: 0.1)), removal: .opacity.animation(.easeInOut(duration: 0.3).delay(0.2))))
             }
         }
     }
