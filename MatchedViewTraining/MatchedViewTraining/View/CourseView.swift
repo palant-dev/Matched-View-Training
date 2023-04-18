@@ -13,6 +13,7 @@ struct CourseView: View {
     @Binding var show: Bool
     @State var appear = [false, false, false]
     @State var viewState: CGSize = .zero
+    @State var isDraggable = true
 
 
     var body: some View {
@@ -33,19 +34,7 @@ struct CourseView: View {
             .background(.black.opacity(viewState.width / 500))
             .background(.ultraThinMaterial)
             // Need to put here the gesture because otherwise Safe Area will give problem
-            .gesture(
-                DragGesture()
-                    .onChanged { value in
-                        // This guard prevent reverse zoom when dragging right
-                        guard value.translation.width > 0 else { return }
-                        viewState = value.translation
-                    }
-                    .onEnded { value in
-                        withAnimation(.closeCard) {
-                            viewState = .zero
-                        }
-                    }
-            )
+            .gesture(isDraggable ? drag : nil )
             .ignoresSafeArea()
 
             button
@@ -165,6 +154,37 @@ struct CourseView: View {
         .padding(20)
     }
 
+    //Attention here, because you need Gesture protocol and not View
+    var drag: some Gesture {
+        // minimumDistance and coordinateSpace are a fix for a bug that lock the screen midway during the gesture
+        DragGesture(minimumDistance: 30, coordinateSpace: .local)
+            .onChanged { value in
+                // This guard prevent reverse zoom when dragging right
+                guard value.translation.width > 0 else { return }
+
+                if value.startLocation.x < 100 {
+                    // This withAnimation is for solving a bug breaking the UI while dragging
+                    withAnimation(.closeCard) {
+                        viewState = value.translation
+                    }
+                }
+
+                if viewState.width > 120 {
+                    close()
+                }
+            }
+            .onEnded { value in
+                if viewState.width > 80 {
+                    close()
+                    // This is used because inside close() we already have this
+                } else {
+                    withAnimation(.closeCard) {
+                        viewState = .zero
+                    }
+                }
+            }
+    }
+
     func fadeIn() {
         withAnimation(.easeOut.delay(0.3)) {
             appear[0] = true
@@ -183,6 +203,18 @@ struct CourseView: View {
             appear[1] = false
             appear[2] = false
         }
+    }
+
+    func close() {
+            withAnimation(.closeCard.delay(0.1)) {
+                show.toggle()
+            }
+
+        withAnimation(.closeCard) {
+            viewState = .zero
+        }
+
+        isDraggable = false
     }
 }
 
