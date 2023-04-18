@@ -24,20 +24,27 @@ struct HomeView: View {
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal, 20)
-                
-                if !show {
-                    cards
-                } else {
-                    ForEach(courses) { course in
-                        Rectangle()
-                            .fill(.gray)
-                            .frame(height: 300)
-                            .cornerRadius(30)
-                            .shadow(color: Color(.black), radius: 20, x: 0, y: 20)
-                            .opacity(0.3)
-                            .padding(.horizontal, 30)
+
+                // spacing manage all the space between columns and rows inside LazyVGrid
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 300), spacing: 20)], spacing: 20) {
+                    if !show {
+                        cards
+                    } else {
+                        ForEach(courses) { course in
+                            Rectangle()
+                                .fill(.gray)
+                                .frame(height: 300)
+                                .cornerRadius(30)
+                                .shadow(color: Color(.black), radius: 20, x: 0, y: 20)
+                                .opacity(0.3)
+                                .padding(.horizontal, 30)
+                        }
                     }
                 }
+                // This padding is for the outside of the LazyVGrid
+                .padding(.horizontal, 20)
+
+
             }
             
             // You need to use this out of the ScrollView otherwise you will get cut by ScrollView boundaries
