@@ -66,7 +66,6 @@ struct HomeView: View {
         }
     }
     
-    
     var cards: some View {
         ForEach(courses) { course in
             CourseItem(namespace: namespace, course: course, show: $show)
@@ -78,6 +77,9 @@ struct HomeView: View {
                         selectedID = course.id
                     }
                 }
+                .accessibilityElement(children: .combine)
+                .accessibilityAddTraits(.isButton)
+                .accessibilityHidden(course.id == selectedID ? false : true)
         }
     }
     
@@ -93,7 +95,6 @@ struct HomeView: View {
         }
     }
 }
-
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {

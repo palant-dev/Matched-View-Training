@@ -13,7 +13,9 @@ struct CourseItem: View {
     var namespace: Namespace.ID
     var course: Course = courses[0]
     @Binding var show: Bool
-    
+
+    // This is for reading accessiblity dynamicTypeSize settings
+    @Environment(\.dynamicTypeSize) var dynamicTypeSize
 
     var body: some View {
         VStack {
@@ -23,6 +25,7 @@ struct CourseItem: View {
                 Text(course.title)
                     .font(.largeTitle.weight(.bold))
                     .matchedGeometryEffect(id: "title\(course.id)", in: namespace)
+                    .dynamicTypeSize(.large)
                 .frame(maxWidth: .infinity, alignment: .leading)
 
                 Text(course.subtitle.uppercased())
@@ -31,7 +34,9 @@ struct CourseItem: View {
 
                 Text(course.text)
                     .font(.footnote)
+                    .multilineTextAlignment(.leading)
                     .matchedGeometryEffect(id: "text\(course.id)", in: namespace)
+                    .lineLimit(dynamicTypeSize > .large ? 1 : 2)
             }
             .padding(20)
             .background(
@@ -49,6 +54,7 @@ struct CourseItem: View {
                 .aspectRatio(contentMode: .fit)
                 .padding(20)
                 .matchedGeometryEffect(id: "image\(course.id)", in: namespace)
+                .accessibilityLabel("Description for accessibility for image")
         )
         .background(
             Image(course.background)

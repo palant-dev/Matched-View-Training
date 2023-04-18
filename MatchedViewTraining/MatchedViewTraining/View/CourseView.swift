@@ -69,6 +69,7 @@ struct CourseView: View {
                     .frame(maxWidth: 500)
                     .matchedGeometryEffect(id: "image\(course.id)", in: namespace)
                     .offset(y: scrollY > 0 ? scrollY * -0.8 : 0)
+                    .accessibilityLabel("Description for accessibility for image")
             )
             .background(
                 Image(course.background)
@@ -80,6 +81,7 @@ struct CourseView: View {
                 // If you want to zoom the background image while pulling (+1 needed because scale start from 1 and not 0)
                     .scaleEffect( scrollY > 0 ? scrollY / 1000 + 1 : 1)
                     .blur(radius: scrollY / 10)
+                    .accessibilityHidden(true)
             )
             .mask {
                 RoundedRectangle(cornerRadius: appear[0] ? 0 : 30, style: .continuous)
@@ -153,6 +155,7 @@ struct CourseView: View {
                     RoundedRectangle(cornerRadius: 30, style: .continuous))
                 .matchedGeometryEffect(id: "blur\(course.id)", in: namespace)
         )
+        .accessibilityElement(children: .combine)
         .offset(y: 250)
         .padding(20)
     }
